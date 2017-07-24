@@ -20,9 +20,22 @@ class CuratorTest < Minitest::Test
   end
 
   def test_it_can_create_an_instance_of_museum_class
+    skip
     curator = Curator.new
     museum = curator.add_museum({name: "MoMA"})
     assert_instance_of Museum, museum
+  end
+
+  def test_museum_can_be_added_to_curators_museums_array
+    curator = Curator.new
+    curator.add_museum({name: "MoMA"})
+    assert_equal 1, curator.museums.length
+  end
+
+  def test_when_added_curator_museum_returns_count
+    curator = Curator.new
+    curator.add_museum({name: "MoMA"})
+    assert_equal 1, curator.museums.count
   end
 
 

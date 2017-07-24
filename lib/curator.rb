@@ -9,6 +9,7 @@ class Curator
   end
 
   def add_museum(hash)
-    Museum.new(hash)
+    museum = Museum.new(hash)
+    @museums << museum
   end
 end
