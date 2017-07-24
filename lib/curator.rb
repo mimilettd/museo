@@ -1,3 +1,4 @@
+require 'pry'
 require_relative 'museum'
 
 class Curator
@@ -11,5 +12,9 @@ class Curator
   def add_museum(hash)
     museum = Museum.new(hash)
     @museums << museum
+  end
+
+  def add_artist(hash)
+    artist = Artist.new(hash)
   end
 end

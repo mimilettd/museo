@@ -38,5 +38,18 @@ class CuratorTest < Minitest::Test
     assert_equal 1, curator.museums.count
   end
 
+  def test_when_added_museum_has_id
+    skip
+    curator = Curator.new
+    curator.add_museum({name: "MoMA"})
+    assert_equal 1, curator.museums.first.id
+  end
+
+  def test_curator_can_add_artist
+    skip
+    curator = Curator.new
+    curator.add_artist({name: "Ansel Adams", born: 1902, died: 1984, country: "United States"})
+    assert_instance_of Artist, curator.add_artist
+  end
 
 end
