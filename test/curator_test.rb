@@ -19,4 +19,11 @@ class CuratorTest < Minitest::Test
     assert_equal [], curator.museums
   end
 
+  def test_it_can_create_an_instance_of_museum_class
+    curator = Curator.new
+    museum = curator.add_museum({name: "MoMA"})
+    assert_instance_of Museum, museum
+  end
+
+
 end
