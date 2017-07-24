@@ -6,7 +6,7 @@ class Photograph
               :year
   def initialize(hash={})
     @name = hash[:name]
-    @id = 1
+    @id = hash[:id]
     @artist_id = hash[:artist_id]
     @museum_id = hash[:museum_id]
     @year = hash[:year]
