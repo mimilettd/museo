@@ -8,4 +8,9 @@ class CuratorTest < Minitest::Test
     curator = Curator.new
     assert_instance_of Curator, curator
   end
+
+  def test_artists_starts_as_empty_array
+    curator = Curator.new
+    assert_equal [], curator.artists
+  end
 end
