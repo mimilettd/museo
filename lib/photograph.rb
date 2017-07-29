@@ -1,14 +1,14 @@
 class Photograph
-  attr_reader :name,
-              :id,
+  attr_reader :id,
               :artist_id,
               :museum_id,
+              :name,
               :year
-  def initialize(hash={})
-    @name = hash[:name]
-    @id = hash[:id]
-    @artist_id = hash[:artist_id]
-    @museum_id = hash[:museum_id]
-    @year = hash[:year]
+  def initialize(data)
+    @id = data[:id]
+    @artist_id = data[:artist_id]
+    @museum_id = data[:museum_id]
+    @name = data[:name]
+    @year = data[:year]
   end
 end

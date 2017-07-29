@@ -4,12 +4,11 @@ class Artist
               :born,
               :died,
               :country
-
-  def initialize(arguments)
-    @id      = arguments[:id]
-    @name    = arguments[:name]
-    @born    = arguments[:born]
-    @died    = arguments[:died]
-    @country = arguments[:country]
+  def initialize(data)
+    @id = data[:id]
+    @name = data[:name]
+    @born = data[:born]
+    @died = data[:died]
+    @country = data[:country]
   end
 end
